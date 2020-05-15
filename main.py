@@ -190,12 +190,6 @@ def decisionTreeClassifier(type):
         else:
             return classify(row, node.false_branch)
 
-    # def print_leaf(counts):
-    #     total = sum(counts.values()) * 1.0
-    #     probs = {}
-    #     for lbl in counts.keys():
-    #         probs[lbl] = str(int(counts[lbl] / total * 100)) + "%"
-    #     return probs
     print('Training End...')
     l = Label(root, text=f"Training End at: {datetime.datetime.now().strftime('%H:%M:%S')}")
     lv.insert(END, f"Training End at: {datetime.datetime.now().strftime('%H:%M:%S')}")
@@ -204,8 +198,6 @@ def decisionTreeClassifier(type):
         i = 0
         for row in devedData:
             rows.append(classify(row, ourTree))
-            # print("Review Number: %s,Actual: %s, Predicted: %s" %
-            #       (i, row[-1],classify(row, ourTree)))
             i += 1
 
         y = 0
