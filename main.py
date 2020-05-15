@@ -181,24 +181,6 @@ def decisionTreeClassifier(type):
 
     ourTree = treeBuilding(trainedData)
 
-    # def print_tree(node, spacing=""):
-    #     """World's most elegant tree printing function."""
-    #
-    #     if isinstance(node, Leaf):
-    #         print(spacing + "Predict", node.predictions)
-    #         return
-    #
-    #     print(spacing + str(node.question))
-    #
-    #     print(spacing + '--> True:')
-    #     print_tree(node.true_branch, spacing + "  ")
-    #
-    #     print(spacing + '--> False:')
-    #     print_tree(node.false_branch, spacing + "  ")
-    #
-    #
-    # print_tree(ourTree)
-
     def classify(row, node):
         if isinstance(node, Leaf):
             return node.predictions
